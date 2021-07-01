@@ -1,0 +1,35 @@
+  <section id="parallax-page" class="p-5">
+    <style>
+      #parallax-page{
+      	height: 60vh;
+        position: relative;
+        background: url('https://cdn.shopify.com/s/files/1/0569/9397/2379/files/service-2.jpg?v=1622135225');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+      }
+
+      #parallax-page::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        bottom:0;
+        right:0;
+        background: rgba(0,0,0,0.5);
+        z-index: 1;
+      }
+
+      #parallax-page .row{
+        position: relative;
+        height: 100%;
+        z-index: 100;
+      }
+      
+    </style>
+    <div class="row align-items-center justify-content-center">
+      <h3 class="text-center">{{ 'general.404.title' | t }} - {{ 'general.404.subtext_html' | t }}</h3>
+    </div>
+  </section>

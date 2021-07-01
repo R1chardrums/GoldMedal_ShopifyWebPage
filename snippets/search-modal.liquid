@@ -1,0 +1,53 @@
+<style>
+  	.mod-space{
+  		height: 100%;
+  	}
+
+  	.modal-content{
+  		background: rgba(0,0,0,0.7)!important;
+  		color: white!important;
+      	padding: 15px;
+  		border: 0!important;
+  	}
+
+  	.modal-content span{
+  		color: white!important;
+  	}
+  
+    .modal-content .buton{
+            background: #bd970c;
+      		color:white;
+            border: 3px solid #bd970c;
+    }
+
+    .modal-content .buton p{
+            margin:0;
+    }
+  
+    .modal-content .buton:hover{  
+            background: #fff;   
+            color: #bd970c!important; 
+            border: 3px solid #bd970c;
+    }
+</style>
+
+	  <div class="modal fade" id="formulario" role="form" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="row align-items-center justify-content-center mod-space">
+	    <div class="modal-dialog" role="document">
+	      <div class="modal-content">
+	        <div class="modal-header">
+              <h3 class="modal-title text-center"><strong>Search products here</strong></h3>
+	          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	            <span aria-hidden="true">&times;</span>
+	          </button>
+	        </div>
+	        <div class="modal-body">
+              <form action="/search" method="GET" role="search" class="row justify-content-center">
+              	<input type="text" class="form-control" name="q" value="{{ search.terms | escape }}">
+                <button type="submit" class="buton btn badge badge-pill py-2 px-3 m-3"><p>Search <i class="fas fa-search"></i></p></button>
+              </form>
+	        </div>
+	      </div>
+	    </div>
+		</div>
+	  </div>

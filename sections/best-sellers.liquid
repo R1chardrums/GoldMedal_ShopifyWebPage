@@ -1,0 +1,225 @@
+<section id="best-sellers-section">
+  <style>
+    
+       #best-sellers-section .triangulo {
+          width: 0; 
+          height: 0; 
+          border-left: 30px solid #bd970c;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent; 
+      }
+
+      #best-sellers-section .triangulo-2 {
+          width: 0; 
+          height: 0; 
+          border-left: 30px solid #383838;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent; 
+      }
+      #best-sellers-section .triangulo-3 {
+          width: 0; 
+          height: 0; 
+          border-left: 30px solid #aaaaaa;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent; 
+      }
+
+      #best-sellers-section h2 {
+          color: #383838;
+          font-size: 36px;
+          margin-left: 100px;   
+      }
+
+
+      #best-sellers-section p{
+          color: #bd970c;
+          font-size: 40px;
+          padding-left: 10px;
+          font-weight: 500px;
+          margin-top: -20px;
+
+      }
+    
+      #best-sellers-section button{
+        position: relative;
+        background: #383838;
+        color: white;
+        transition: 0.3s;
+      }
+
+      #best-sellers-section button h4{
+        margin:0;
+      }
+    
+      #best-sellers-section .btn-2 a {
+          background: #fff;
+          padding: 7px 35px;
+          border-radius: 26px;
+          color: #bd980c;
+          border: 3px solid #bd980c;
+          transition: 0.6s;
+      }
+
+      #best-sellers-section .btn-2 a:hover{
+          background: #bd980c;
+          color: #fff;
+          transition: 0.6s;
+      }
+   
+      @media (min-width: 1024px) and (max-width: 1279px){
+      	#best-sellers-section button{        
+			position: relative;
+    		left: -4pc;
+    		padding-left: 60px!important;
+        }
+        
+      	#best-sellers-section .item .h4{
+          	position: relative;
+          	left: -2pc;
+      	}
+      }
+
+      @media (min-width: 1280px) and (max-width: 1439px){
+      	#best-sellers-section button{        
+			position: relative;
+    		left: -6pc;
+    		padding-left: 80px!important;
+        }
+        
+      	#best-sellers-section .item .h4{
+          	position: relative;
+          	left: -4pc;
+      	}
+      }
+    
+      @media (min-width: 1440px){
+      	#best-sellers-section button{        
+			position: relative;
+    		left: -7pc;
+    		padding-left: 80px!important;
+        }
+        
+      	#best-sellers-section .item .h4{
+          	position: relative;
+          	left: -3pc;
+      	}
+      }
+    
+      @media (min-width: 1304px){
+        
+      	#best-sellers-section .item .h4{
+          	position: relative;
+          	left: -1pc;
+      	}
+      }
+    
+      #best-sellers-section button:hover{
+        background: #bd980c;
+      }
+
+      #best-sellers-section .pic{
+        width: 90%;
+        border-radius: 100%;
+        border: 4px solid #bd980c;
+      }
+    
+      #best-sellers-section .price-product-circle{
+        position: relative;
+        top: -4pc;
+        width:120px;
+        height:120px;
+        border-radius: 100%;
+        border: 4px solid #907907;
+        background: #bd980c;
+        color: white;
+        z-index:100;
+      }
+    
+  </style>
+  
+  <div class="container py-5">
+        <div class="triangulo" style = "float: left"></div>
+        <div class="triangulo-2" style = "float: left"></div>   
+        <div class="triangulo-3" style = "float: left"></div>
+        <h2>Best Sellers</h2>
+        <p class="mb-4">Latest Products</p>
+    
+  	<div class="row align-items-center">
+      
+      <div class="col-12">
+        <div class="owl-carousel" id="best-sellers-carousel">
+
+          
+                            
+				  
+          {% for block in section.blocks %}
+          <div class="item m-3">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-lg-6 text-center p-0" style="z-index:10;">
+              <a href="{{ all_products[block.settings.product_select].url | escape }}"><img class="pic" src="{{ all_products[block.settings.product_select] | img_url: '250x' }}" alt="food-picture"></a>            
+                
+                <div class="row justify-content-center align-items-center price-product-circle p-3">
+                  <h6>For sale <br> ${{ all_products[block.settings.block_prdct].price | divided_by: 100 }}</h6>
+                </div>            
+            </div>
+            <div class="col-lg-6 text-center p-0" style="position: relative; top: -4pc;">
+              <h4 class="h4 my-3">{{ all_products[block.settings.product_select].title }}</h4>
+              <button type="submit" name="add" id="AddToCart" class="btn badge badge-pill py-1 px-3 mt-2"><h4>Add to cart <i class="fas fa-shopping-cart"></i></h4></button>
+            </div>
+          </div>
+        </div>
+          </div>
+ 			{% endfor %}
+<!--          <div class="item m-3">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-lg-6 text-center p-0" style="z-index:10;">
+          		<img class="pic" src="https://cdn.shopify.com/s/files/1/0569/9397/2379/files/190854256_786823065306756_7200931862903910117_n.png?v=1622082407" alt="food-picture">            
+                
+                <div class="row justify-content-center align-items-center price-product-circle p-3">
+                  <h6>For sale <br> $9.99</h6>
+                </div>            
+            </div>
+            <div class="col-lg-6 text-center p-0" style="position: relative; top: -4pc;">
+              <h4 class="h4 my-3">Air Conditioner <br> Spray Cleaner</h4>
+              <button type="button" class="btn badge badge-pill py-1 px-3 mt-2"><h4>Add to cart <i class="fas fa-shopping-cart"></i></h4></button>
+            </div>
+          </div>
+        </div>
+          </div> -->         
+          
+        </div>
+      </div>
+      <div class="col-12">
+          <div class="btn-2 text-center">
+              <a href="#"> View More Products</a>
+          </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Best Sellers Section",
+	"blocks":[
+		{
+          "name": "Product Carousel",
+          "type": "carousel_product",
+          "settings":[
+              {
+                "type": "product",
+                "id": "product_select",
+                "label": "Add a product"
+              }
+          ]
+		}
+	],
+	"presets": [
+		{
+			"name": "Best Sellers Section"
+		}
+	]
+  }
+{% endschema %}

@@ -1,0 +1,561 @@
+  <div class="review-principal">
+  <div class="triangle-1 d-lg-block d-none"></div> 
+  <div class="triangle-2 d-lg-block d-none"></div>
+  <div class="triangle-3 d-lg-block d-none"></div>
+  <section id="reviews-section">
+    
+    <style>
+      .review-principal{
+        position: relative;
+        overflow: hidden;
+      }
+
+
+       #reviews-section{
+        position: relative;
+        padding-top: 50px;
+        padding-bottom: 50px; 
+        background: #e3e3e3;
+       }
+
+       #reviews-section a:hover{
+        text-decoration: none;
+       }
+      
+       #reviews-section .triangulo {
+          width: 0; 
+          height: 0; 
+          border-left: 30px solid #bd970c;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent; 
+      }
+
+      #reviews-section .triangulo-2 {
+          width: 0; 
+          height: 0; 
+          border-left: 30px solid #383838;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent; 
+      }
+
+      #reviews-section .triangulo-3 {
+          width: 0; 
+          height: 0; 
+          border-left: 30px solid #fff;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent; 
+      }
+
+      #reviews-section h2 {
+          color: #383838;
+          font-size: 36px;
+          margin-left: 100px;   
+      }
+
+
+      #reviews-section p{
+          color: #bd970c;
+          font-size: 40px;
+          padding-left: 10px;
+          font-weight: 500px;
+          margin-top: -20px;
+
+      }
+
+       #reviews-section .card-container {    
+        width: 450px;
+        height: 250px;
+        margin: 30px auto;  
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;    
+      }
+
+      #reviews-section .card-container .img-review img{    
+        width: 200px;
+        height: 200px;
+        border: solid 5px #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0; 
+        z-index: 2; 
+      }
+
+      #reviews-section .card-container .name{    
+        width: 80%;
+        height: 40px;
+        background:  #bd970c;
+        border-radius: 25px;
+        position: absolute;
+        color: #fff;
+        z-index: 1;
+        font-size: 20px;
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 30px;
+        left: 10%;
+        top: 20%;
+      }
+
+      #reviews-section .card-container .name h3{ 
+       font-size: 20px;
+      }
+
+      #reviews-section .card-container .customer{    
+        width: 60%;
+        height: 30px;
+        background:  #383838;
+        border-radius: 25px;
+        position: absolute;
+        color: #fff;
+        z-index: 1;  
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 30px;
+        left: 10%;
+        top: 36%;
+      }
+
+      #reviews-section .card-container .customer h5{ 
+       font-size: 18px;
+      }
+
+
+      #reviews-section .card-container .star { 
+       position: absolute;
+       font-size: 20px;
+       bottom: 0;
+       left: 5%;
+       color: #ff9f00;
+      }
+
+      #reviews-section .parrafo-review { 
+       margin-top: -100px;
+       color: #383838;
+       font-size: 20px;
+       margin-right: 50px;
+       margin-left: 50px;
+       font-weight: 700;
+      }
+
+      .owl-review .owl-nav {
+          padding-top: 0;
+          position: absolute;
+          top: 40%;
+          right: 0;
+          width: 0%;    
+      }
+
+
+      .owl-review .owl-prev {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        background: #383838;
+        color: #fff;
+        font-size: 15px;
+        text-align: center;
+        margin-right: 10px;
+        border-radius: 50%;
+        padding-top: 3px;
+        margin-bottom: 20px;
+      }
+
+      .owl-review .owl-next {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        background: #383838;
+        color: #fff;
+        font-size: 15px;
+        text-align: center;
+        margin-right: 10px;
+        border-radius: 50%;
+        padding-top: 3px;
+      }
+
+
+      .owl-review .owl-dots {
+        display:none;
+      }
+
+
+      #reviews-section .btn-4 a {    
+          padding: 7px 35px;
+          border-radius: 26px;
+          color: #383838;
+          border: 3px solid #383838;
+          transition: 0.6s;
+      }
+
+      #reviews-section .btn-4 a:hover{
+          background: #383838;
+          color: #fff;
+          transition: 0.6s;
+      }
+
+      .border-right-2{
+       border-right: 1px solid #383838 !important
+       }
+
+
+       .owl-brand .owl-dots {
+        display: none !important;
+      }
+
+       .review-principal .second-title{
+        color: #fff;
+        font-size: 40px;
+        position: relative;
+        z-index:  5;
+        margin-left: 20px;
+      }
+
+
+      .review-principal .triangle-1:after {
+          position: absolute;
+          top: 0%;
+          left: -25%;
+          height: 1100px;
+          width: 750px;
+          content: '';
+          background: #383838;
+          opacity: 0.7;
+          z-index: 1;
+          border-radius: 5%;
+          transform: rotate(20deg); 
+      }
+
+      .review-principal .triangle-2:after {
+          position: absolute;
+          top: 0%;
+          left: -35%;
+          height: 1100px;
+          width: 750px;
+          content: '';
+          background: #383838;
+          opacity: 0.7;
+          z-index: 1;
+          border-radius: 5%;
+          transform: rotate(30deg); 
+      }
+
+      .review-principal .triangle-3:after {
+          position: absolute;
+          top: 0%;
+          left: -45%;
+          height: 1100px;
+          width: 750px;
+          content: '';
+          background: #383838;
+          opacity: 0.7;
+          z-index: 1;
+          border-radius: 5%;
+          transform: rotate(40deg); 
+      }
+
+
+      @media (max-width: 768px) {
+      #reviews-section .parrafo-review { 
+      position: relative;
+       margin-top: 0px;
+       margin-left: 40px;
+      }
+
+      .owl-brand img{
+        margin-top: 50px;
+      }
+
+       .border-right-2{
+        border-right: 1px solid transparent !important
+       }
+
+        .review-principal .second-title{
+        color: #383838; 
+        text-align: center;
+        margin-left: 0px;
+      }
+
+      #reviews-section .btn-4  {    
+          text-align: center !important;
+      }
+
+      .owl-brand .owl-dots {  
+        display: none !important;
+      }
+
+
+
+      }
+
+      @media (max-width: 468px) {
+         #reviews-section .card-container {    
+        width: 100%;
+        height: 155px;   
+      }
+
+      #reviews-section .card-container .img-review img{    
+        width: 108px;
+        height: 108px;
+        top:5%;
+      }
+
+      #reviews-section .card-container .name{    
+        width: 80%;
+        height: 40px;
+        left: 20%;
+        top: 20%;
+      }
+
+      #reviews-section .card-container .name h3{ 
+       font-size: 18px;
+      }
+
+      #reviews-section .card-container .customer{    
+        width: 60%;
+        height: 30px;
+        padding-right: 30px;
+        left: 15%;
+        top: 40%;
+      }
+
+      #reviews-section .card-container .customer h5{ 
+       font-size: 16px;
+      }
+
+      #reviews-section .parrafo-review { 
+      position: relative;
+       margin-top: 0px;
+       margin: 0 20px;
+      }
+
+      .owl-review .owl-nav {
+          display: none;    
+      }
+
+      .owl-review .owl-dots {
+        display: none;
+      }
+
+      .owl-brand .owl-dots {  
+        display: none !important;
+      }
+
+
+      }
+
+      .review-principal .triangle-review{
+        transform: rotate(70deg);
+        position: absolute;
+        top: -70px;
+        left: -0px;
+        z-index: 4;
+      }
+
+      .review-principal .triangulo-redondeado,
+      .review-principal .triangulo-redondeado:before,
+      .review-principal .triangulo-redondeado:after {
+        position: relative;
+        display:block;
+        width:  120px;
+        height: 120px;
+        background: #bd970c;
+        border-top-right-radius: 20px;
+      }
+      .review-principal .triangulo-redondeado {
+        margin: 60px auto 0 auto;
+        transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+      }
+      .review-principal .triangulo-redondeado:before,
+      .review-principal .triangulo-redondeado:after {
+        content: '';
+        position: absolute;
+      }
+      .review-principal .triangulo-redondeado:before {
+        transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+      }
+      .review-principal .triangulo-redondeado:after {
+        transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+      }    
+    </style>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">       
+        </div>
+        <div class="col-md-5">
+        <div class="triangulo" style = "float: left"></div>
+        <div class="triangulo-2" style = "float: left"></div>   
+        <div class="triangulo-3" style = "float: left"></div>
+        <h2>Reviews</h2>     
+        <p>What our clients think</p>       
+        </div>
+        <div class="col-12">
+          <div class="owl-carousel owl-review">
+          <!-- REVIEW 1-->
+          <div class="item">
+          <div class="row">
+             <div class="col-md-1">
+             </div>
+            <div class="col-md-7">
+               <div class="card-container">
+                <div class="name">
+                  <h3> Lisa (Las Vegas)</h3>
+                </div>
+                <div class="customer">
+                  <h5> customer</h5>
+                </div>
+                 <div class="img-review">
+                   <img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0569/9397/2379/files/about.jpg?v=1622131576" alt="...">
+                 </div>
+                 <div class="star">
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                </div>
+               </div>            
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+              <p class="parrafo-review">Very knowledgeable, professional and great customer service. Signup for their Maintenance Program for VIP service and discounts. Recommended to many!</p>
+            </div>
+          </div>
+          </div>
+          <!-- REVIEW 2-->
+           <div class="item">
+          <div class="row">
+             <div class="col-md-1">
+             </div>
+            <div class="col-md-7">
+               <div class="card-container">
+                <div class="name">
+                  <h3> Lisa (Las Vegas)</h3>
+                </div>
+                <div class="customer">
+                  <h5> customer</h5>
+                </div>
+                 <div class="img-review">
+                   <img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0569/9397/2379/files/about.jpg?v=1622131576" alt="...">
+                 </div>
+                 <div class="star">
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                </div>
+               </div>            
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+              <p class="parrafo-review">Very knowledgeable, professional and great customer service. Signup for their Maintenance Program for VIP service and discounts. Recommended to many!</p>
+            </div>
+          </div>
+          </div>
+          <!-- REVIEW 3-->
+           <div class="item">
+          <div class="row">
+             <div class="col-md-1">
+             </div>
+            <div class="col-md-7">
+               <div class="card-container">
+                <div class="name">
+                  <h3> Lisa (Las Vegas)</h3>
+                </div>
+                <div class="customer">
+                  <h5> customer</h5>
+                </div>
+                 <div class="img-review">
+                   <img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0569/9397/2379/files/about.jpg?v=1622131576" alt="...">
+                 </div>
+                 <div class="star">
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                </div>
+               </div>            
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+              <p class="parrafo-review">Very knowledgeable, professional and great customer service. Signup for their Maintenance Program for VIP service and discounts. Recommended to many!</p>
+            </div>
+          </div>
+          </div>
+          </div>
+          <div class="col-12">
+            <div class="btn-4 text-right mt-5">
+              <a href="#"> Review Us</a>
+           </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container-fluid " style="position: relative; overflow: hidden;">
+  	<div class="triangle-review">
+      		<div class="triangulo-redondeado"></div>
+    </div>
+  	<div class="row">
+  		<div class="col-12 p-5">
+  			
+  			<div class="row">
+  				<div class="col-md-3">
+  					 <h2 class="second-title">Brands We<br>Service</h2>
+  				</div>
+  				<div class="col-md-3 border-right-2 d-flex align-items-center justify-content-center">
+  					<p class="text-center"> <img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0569/9397/2379/files/brand-1.png?v=1622157113" alt="..."></p>
+  				</div>
+  				<div class="col-md-6 d-flex align-items-center justify-content-center">
+  					 <div class="owl-carousel owl-brand d-flex align-items-center justify-content-center">         
+                       <div class="item  d-flex align-items-center justify-content-center">
+                       	  <a href="#" target="_blank"><img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0569/9397/2379/files/brand-2.png?v=1622157113" alt="..."></a>
+                       </div>
+                       <div class="item  d-flex align-items-center justify-content-center">
+                       	 <a href="#" target="_blank"><img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0569/9397/2379/files/brand-3.png?v=1622157113" alt="..."></a>
+                       </div>
+                       <div class="item  d-flex align-items-center justify-content-center">
+                       	 <a href="#" target="_blank"><img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0569/9397/2379/files/brand-4.png?v=1622157113" alt="..."></a>
+                       </div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "Reviews Section",
+    "settings": [
+		{
+			"type": "text",
+			"id": "video_url",
+			"label": "Put here a video URL"
+		}
+	],
+	"presets": [
+		{
+			"name": "Reviews Section"
+		}
+	]
+  }
+{% endschema %}

@@ -1,0 +1,156 @@
+    <section class="newsletter-area section-padding-100 bg-img jarallax img-fluid" style="background-image: url('https://cdn.shopify.com/s/files/1/0569/9397/2379/files/newsletter.jpg?v=1622161996'); background-size: cover;">
+      
+      <style>
+        .newsletter-area {
+          position: relative;
+          z-index: 3; 
+        }
+
+
+        .newsletter-area::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.7);
+          z-index: -1; 
+        }
+
+        .newsletter-area .nl-content {
+          position: relative;
+          z-index: 1; 
+        }
+
+        .newsletter-area .triangulo {
+            width: 0; 
+            height: 0; 
+            border-left: 30px solid #bd970c;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent; 
+        }
+
+        .newsletter-area .triangulo-2 {
+            width: 0; 
+            height: 0; 
+            border-left: 30px solid #aaaaaa;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent; 
+        }
+
+        .newsletter-area .triangulo-3 {
+            width: 0; 
+            height: 0; 
+            border-left: 30px solid #fff;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent; 
+        }
+
+        .newsletter-area h2 {
+            color: #bd970c;
+            font-size: 36px;
+            margin-left: 100px;   
+        }
+
+        .newsletter-area p {
+            color: #fff;
+            font-size: 24px;      
+        }
+
+
+          .newsletter-area form {
+              width: 100%;
+              position: relative;
+              z-index: 3;
+              margin-bottom: 30px; 
+          }
+
+          .newsletter-area  form input {
+                width: 70%;
+                height: 45px;
+                background-color: rgb(255, 255, 255, 0.7);
+                border-radius: 30px;
+                border: none;
+                font-size: 14px;      
+                padding: 0 20px;       
+          }
+
+          .newsletter-area form button {
+            -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+            position: absolute;
+            width: 130px;
+            height: 45px;
+            background-color: #bd970c;    
+            border-radius: 30px;
+            top: 0;
+            right: 0;    
+            font-size: 14px;
+            color: #ffffff;
+            text-align: center;
+            cursor: pointer;
+            z-index: 20;
+            border: 3px solid #bd970c;
+          }
+
+          .newsletter-area form button:hover{
+            -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;   
+            background-color: #fff;   
+            color: #bd970c; 
+            border: 3px solid #bd970c;
+          }
+
+        .section-padding-100 {
+          padding-top: 100px;
+          padding-bottom: 100px; 
+        }
+        
+        @media (max-width: 300px){
+          .newsletter-area h2{
+          	font-size:29px!important;
+          }
+        }
+      </style>
+      
+      <div class="container">
+            <div class="row justify-content-center">
+            	<div class="col-12">
+            		<div class="triangulo" style = "float: left"></div>
+			        <div class="triangulo-2" style = "float: left"></div>   
+			        <div class="triangulo-3" style = "float: left"></div>
+			        <h2>Get Our Newsletter</h2> 
+            	</div>
+            	<div class="col-md-6 mt-5">
+            		<p>
+            			Sign Up to Receive Monthly Filter Change Reminders and Other Home Care Tips.
+            		</p>
+            	</div>
+            	<div class="col-md-6 mt-5">
+            		<form action="#">
+                            <input type="email" name="nl-email" id="nlemail" placeholder="Your e-mail">
+                            <button type="submit">Subscribe</button>
+                     </form>
+            	</div>              
+            </div>
+        </div>
+    </section>
+
+{% schema %}
+  {
+    "name": "Newsletter Section",
+    "settings": [
+		{
+			"type": "text",
+			"id": "video_url",
+			"label": "Put here a video URL"
+		}
+	],
+	"presets": [
+		{
+			"name": "Newsletter Section"
+		}
+	]
+  }
+{% endschema %}
